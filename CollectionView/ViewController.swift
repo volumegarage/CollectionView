@@ -42,6 +42,7 @@ class ViewController: UIViewController {
                 collectionData.remove(at: item)
             }
             collectionView.deleteItems(at: selected)
+            navigationController?.isToolbarHidden = true // Hides tool bar after deletion.
         }
     }
     
@@ -86,6 +87,9 @@ class ViewController: UIViewController {
         collectionView.refreshControl = refresh
         // Edit
         navigationItem.leftBarButtonItem = editButtonItem
+        
+        // Hide toolbar on initial load
+        navigationController?.isToolbarHidden = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -102,6 +106,8 @@ class ViewController: UIViewController {
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         
+        // Set up Editing Toolbar on bottom
+//        navigationController?.isToolbarHidden = false
         deleteButton.isEnabled = editing
         addButton?.isEnabled = !editing // Disables Add Item Button when editing
         
@@ -114,6 +120,10 @@ class ViewController: UIViewController {
         for index in indexes {
             let cell = collectionView.cellForItem(at: index) as! CollectionViewCell
             cell.isEditing = editing
+        }
+        
+        if !editing {
+            navigationController?.isToolbarHidden = true // Hide tool bar
         }
         
     }
@@ -155,6 +165,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         if !isEditing {
             performSegue(withIdentifier: "DetailSegue", sender: indexPath)
+        } else {
+            navigationController?.isToolbarHidden = false // Showing Toolbar at bottom
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if isEditing {
+            if let selected = collectionView.indexPathsForSelectedItems,
+                selected.count == 0 {
+                navigationController?.isToolbarHidden = true
+            }
         }
     }
     
