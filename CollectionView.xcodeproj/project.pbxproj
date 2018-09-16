@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB7BE6F1214DB82100AD92AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BE6F0214DB82100AD92AE /* DetailViewController.swift */; };
+		FB7BE6F3214E87DD00AD92AE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7BE6F2214E87DD00AD92AE /* CollectionViewCell.swift */; };
 		FB7EDF12214D6F720057411C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7EDF11214D6F720057411C /* AppDelegate.swift */; };
 		FB7EDF14214D6F720057411C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7EDF13214D6F720057411C /* ViewController.swift */; };
 		FB7EDF17214D6F720057411C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7EDF15214D6F720057411C /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB7BE6F0214DB82100AD92AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FB7BE6F2214E87DD00AD92AE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		FB7EDF0E214D6F720057411C /* CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7EDF11214D6F720057411C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB7EDF13214D6F720057411C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				FB7EDF18214D6F730057411C /* Assets.xcassets */,
 				FB7EDF1A214D6F730057411C /* LaunchScreen.storyboard */,
 				FB7EDF1D214D6F730057411C /* Info.plist */,
+				FB7BE6F0214DB82100AD92AE /* DetailViewController.swift */,
+				FB7BE6F2214E87DD00AD92AE /* CollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7BE6F1214DB82100AD92AE /* DetailViewController.swift in Sources */,
 				FB7EDF14214D6F720057411C /* ViewController.swift in Sources */,
+				FB7BE6F3214E87DD00AD92AE /* CollectionViewCell.swift in Sources */,
 				FB7EDF12214D6F720057411C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YQ85T79854;
 				INFOPLIST_FILE = CollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YQ85T79854;
 				INFOPLIST_FILE = CollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
